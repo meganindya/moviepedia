@@ -1,41 +1,40 @@
+p {
+  margin: 0 0 10.5px;
+}
+
 .biography {
   font-size: 1.4em;
   font-weight: bold;
   text-transform: uppercase;
 }
 
-p {
-  margin: 0 0 10.5px;
-}
-
 .media-object {
-    float: left;
-    width: 100%;
-}
-
-.container {
-  margin-top: -3%;
+  float: left;
+  width: 100%;
 }
 
 .item {
-  position: relative;
+  /* position: relative; */
   margin: 1rem .625rem;
-  width: 200px;
+  width: 180px;
   text-align: center;
 }
 
 .item:hover {
-  transform: scale(1.1);
+  transform: scale(1.05);
 }
 
 .items {
+  margin-top: 30px;
+  margin-bottom: 50px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
 }
 
 img {
-  height: 70%;
+  width: 180px;
+  margin-bottom: 10.5px;
 }
 
 .character {
@@ -49,4 +48,3 @@ img {
 p, h1 {
   color: azure;;
 }
-

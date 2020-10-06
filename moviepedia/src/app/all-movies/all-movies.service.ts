@@ -14,7 +14,7 @@ export class AllMoviesService {
   constructor(public _http: HttpClient) { }
 
   getUpcomingMovies() {
-    return this._http.get(this.movie_url + 'discover/movie?primary_release_date.gte=2018-04-15&primary_release_date.lte=2018-07-31' + '&api_key=' + this.api_key);
+    return this._http.get(this.movie_url + 'discover/movie?primary_release_date.gte=2020-11-15&primary_release_date.lte=2021-03-31' + '&api_key=' + this.api_key);
   }
 
   getPopularMovies() {

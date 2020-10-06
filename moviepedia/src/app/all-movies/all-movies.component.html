@@ -44,6 +44,40 @@
 </div>
 
 
+<!-- Popular Movies -->
+
+<div class="movie-type">
+  <h1>Popular Movies</h1>
+</div>
+
+<div class="movies">
+  <div *ngFor="let popular of popular_movies; let i = index">
+    <div *ngIf="i < 15">
+      <div class="card movie">
+        <div class="card-header bg-dark text-white">
+          {{ popular.release_date | date:'mediumDate' }}
+        </div>
+
+        <div class="card-body clearfix">
+          <img class="img-fluid" src="https://image.tmdb.org/t/p/w500/{{ popular.poster_path }}"
+            alt="{{ popular.original_title }}" style="height: 460px">
+
+          <h4>{{ popular.original_title }}</h4>
+
+          <div class="movie-description">
+            <span>Popularity: {{ popular.popularity  | number : '1.0-1' }}</span>
+            <span>Vote count: {{ popular.vote_count }}</span>
+
+            <h5><i class="fas fa-star"></i>&nbsp;&nbsp;{{ popular.vote_average }}</h5>
+          </div>
+        </div>
+
+        <a routerLink="/movie/{{ popular.id }}" class="btn btn-block btn-outline-info">Movie Details</a>
+      </div>
+    </div>
+  </div>
+</div>
+
   <!-- Upcoming Movies -->
 
 <div class="movie-type">
@@ -72,40 +106,6 @@
         </div>
 
         <a routerLink="/movie/{{ upcoming.id }}" class="btn btn-block btn-outline-info">Movie Details</a>
-      </div>
-    </div>
-  </div>
-</div>
-
-
-  <!-- Popular Movies -->
-
-<div class="movie-type">
-  <h1>Popular Movies</h1>
-</div>
-
-<div class="movies">
-  <div *ngFor="let popular of popular_movies; let i = index">
-    <div *ngIf="i < 15">
-      <div class="card movie">
-        <div class="card-header bg-dark text-white">
-          {{ popular.release_date | date:'mediumDate' }}
-        </div>
-
-        <div class="card-body clearfix">
-          <img class="img-fluid" src="https://image.tmdb.org/t/p/w500/{{ popular.poster_path }}" alt="{{ popular.original_title }}" style="height: 460px">
-
-          <h4>{{ popular.original_title }}</h4>
-
-          <div class="movie-description">
-            <span>Popularity: {{ popular.popularity  | number : '1.0-1' }}</span>
-            <span>Vote count: {{ popular.vote_count }}</span>
-
-            <h5><i class="fas fa-star"></i>&nbsp;&nbsp;{{ popular.vote_average }}</h5>
-          </div>
-        </div>
-
-        <a routerLink="/movie/{{ popular.id }}" class="btn btn-block btn-outline-info">Movie Details</a>
       </div>
     </div>
   </div>

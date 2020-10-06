@@ -1,10 +1,8 @@
 # Moviepedia
+List of movies their actor/actress
 
-Movie explorer
-
-# Screenshots
-
-![moviesList](/assets/1-movie-list.PNG)</br>
-![movieDeatil](/assets/2-movie-details.PNG)</br>
-![people](/assets/3-actor-list.PNG)</br>
-![peopleBio](/assets/4-actor-details.PNG)
+# Screenshot 
+![moviesList](/assets/1.PNG)
+![movieDeatil](/assets/2.PNG)
+![people](/assets/3.PNG)
+![peopleBio](/assets/4.PNG)
